@@ -1,0 +1,9 @@
+@use '../config' as *;
+
+// HEADER
+.nav {
+  &__list {
+    display: none;
+  }
+
+}

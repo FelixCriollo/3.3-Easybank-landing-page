@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+:root {
+  --dark-blue: hsl(233, 26%, 24%);
+  --green: hsl(136, 65%, 51%);
+  --cyan: hsl(192, 70%, 51%);
+  --g-blue: hsl(233, 8%, 62%);
+  --light-g-blue: hsl(220, 16%, 96%);
+  --v-light-gray: hsl(0, 0%, 98%);
+  --white: #fff;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Public Sans", sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  padding: 1.4em 1.04em;
+}
+
+.request-btn {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--white);
+  padding: 1em 2.3em;
+  border-radius: 100px;
+  background: linear-gradient(90deg, var(--green) 0%, var(--cyan) 100%);
+}
+
+.nav__list {
+  display: none;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background: var(--white);
+  z-index: 10;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.header__btn {
+  display: none;
+}
+
+.section-start {
+  background: url("../../images/bg-intro-mobile.svg") no-repeat, var(--v-light-gray);
+  background-position-x: -8px;
+}
+
+.start {
+  padding-top: 0;
+  padding-bottom: 90px;
+  display: grid;
+  grid-template-areas: "a" "b";
+}
+.start__title {
+  font-size: 2.38rem;
+  font-weight: 400;
+  color: var(--dark-blue);
+}
+.start__body {
+  color: var(--g-blue);
+  margin: 22px 0 34px 0;
+  font-size: 0.9rem;
+  line-height: 1.62;
+}
+
+.start-info {
+  grid-area: b;
+  text-align: center;
+}
+
+.start-pictures {
+  position: relative;
+  width: 100%;
+  height: 388px;
+  grid-area: a;
+}
+.start-pictures img {
+  position: absolute;
+  top: -50px;
+  width: 100%;
+  transform: scale(1.05);
+}
+
+.services {
+  display: grid;
+  gap: 2.15em;
+}
+.services__logo {
+  margin-bottom: 1.5em;
+}
+.services__title {
+  margin-bottom: 1.2em;
+  color: var(--dark-blue);
+}
+.services__body {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--g-blue);
+}
+
+.section-about-us {
+  background: var(--light-g-blue);
+}
+
+.about-us {
+  text-align: center;
+  padding-bottom: 5em;
+}
+.about-us__title {
+  font-size: 1.92em;
+  font-weight: 400;
+  color: var(--dark-blue);
+}
+.about-us__body {
+  color: var(--g-blue);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-top: 1.38em;
+}
+
+.about-us-info {
+  padding: 2.3em 0 3.5em 0;
+}
+
+/*# sourceMappingURL=main.css.map */

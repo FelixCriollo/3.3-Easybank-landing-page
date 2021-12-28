@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+:root {
+  // Primary
+  --dark-blue: hsl(233, 26%, 24%);
+  --green: hsl(136, 65%, 51%);
+  --cyan: hsl(192, 70%, 51%);
+  // Secondary
+  --g-blue: hsl(233, 8%, 62%);
+  --light-g-blue: hsl(220, 16%, 96%);
+  --v-light-gray: hsl(0, 0%, 98%);
+  --white: #fff;
+}
+
+*,*::after,*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Public Sans', sans-serif;
+}
+
+@mixin tablet {
+  @media (min-width: 500px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 1080px) {
+    @content;
+  }
+}
+
+body {
+  position: relative;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+li {list-style: none;}
+
+.container {
+  width: 100%;
+  padding: 1.4em 1.04em;
+}

@@ -1,0 +1,21 @@
+@use '../config' as *;
+
+.services {
+  display: grid;
+  gap: 2.15em;
+
+  &__logo {
+    margin-bottom: 1.5em;
+  }
+  
+  &__title {
+    margin-bottom: 1.2em;
+    color: var(--dark-blue);
+  }
+  
+  &__body {
+    font-size: .9rem;
+    line-height: 1.6;    
+    color: var(--g-blue);
+  }
+}

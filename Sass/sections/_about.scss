@@ -1,0 +1,27 @@
+@use '../components/services' as *;
+@use '../config' as *;
+
+.section-about-us {
+  background: var(--light-g-blue);
+}
+
+.about-us {
+  text-align: center;
+  padding-bottom: 5em;
+
+  &__title {
+    font-size: 1.92em;
+    font-weight: 400;
+    color: var(--dark-blue);
+  }
+  &__body {
+    color: var(--g-blue);
+    font-size: .9rem;
+    line-height: 1.7;    
+    margin-top: 1.38em;
+  }
+}
+
+.about-us-info {
+  padding: 2.3em 0 3.5em 0;
+}

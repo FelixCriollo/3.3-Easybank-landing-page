@@ -1,0 +1,21 @@
+@use '../config' as *;
+@use '../components/buttons' as *;
+@use '../components/nav' as *;
+
+header {
+  position: fixed;
+  width: 100%;
+  background: var(--white);
+  z-index: 10;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
+  &__btn {
+    display: none;
+  }
+}
