@@ -1,0 +1,24 @@
+@use '../components/card' as *;
+@use '../config' as *;
+
+.section-articles {
+  background: var(--v-light-gray);
+}
+
+.articles {
+  text-align: center;
+  padding: 5.5em 1.1em;
+
+  &__title {
+    font-size: 1.94rem;
+    font-weight: 300;
+    color: var(--dark-blue);
+    margin-bottom: 1.1em;
+  }
+}
+
+.articles-container {
+  display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1.6em;
+}

@@ -1,0 +1,43 @@
+@use '../components/nav' as *;
+@use '../config' as *;
+
+footer {
+  background: var(--dark-blue);
+}
+
+.footer {
+  text-align: center;
+  padding: 2.5em;
+  display: grid;
+  gap: 1.94em;
+  color: var(--white);
+}
+
+.footer-social {
+  display: grid;
+  gap: 1.94em;
+  padding: 0 2.2em;
+
+  svg {
+    margin: auto;
+  }
+
+  .social-networks {
+    display: flex;
+    justify-content: space-evenly;
+  
+    img {
+      width: 26px;
+    }
+  }
+}
+
+.footer-last {
+  margin-top: .2em;
+
+  .r-reserved {
+    font-size: .9rem;
+    margin-top: 2em;
+  }
+}
+

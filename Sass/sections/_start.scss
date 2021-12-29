@@ -3,7 +3,9 @@
 
 .section-start {
   background: url('../../images/bg-intro-mobile.svg') no-repeat, var(--v-light-gray);
-  background-position-x: -8px;
+  background-position-x: right;
+  background-position-y: 9px;
+  background-size: 100%;
 }
 
 .start {
