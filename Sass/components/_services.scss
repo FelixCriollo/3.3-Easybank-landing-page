@@ -3,19 +3,27 @@
 .services {
   display: grid;
   gap: 2.15em;
+  grid-template-columns: repeat(auto-fit, minmax(238px, 1fr));
 
   &__logo {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5em;    
+    @include desktop {margin-bottom: 2.5em;}
   }
   
   &__title {
     margin-bottom: 1.2em;
     color: var(--dark-blue);
+    @include desktop {font-size: 1.4rem;}
   }
   
   &__body {
     font-size: .9rem;
     line-height: 1.6;    
     color: var(--g-blue);
+    @include desktop {
+      margin-bottom: 2.5em;
+      font-size: .965rem;
+      line-height: 1.7;    
+    }
   }
 }

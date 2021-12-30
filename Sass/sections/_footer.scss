@@ -11,29 +11,47 @@ footer {
   display: grid;
   gap: 1.94em;
   color: var(--white);
+  @include desktop {
+    text-align: left;
+    padding: 3em 1em;
+    grid-template-columns: 256px 1fr 400px;
+  }
 }
 
 .footer-social {
   display: grid;
   gap: 1.94em;
   padding: 0 2.2em;
-
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+    
   svg {
     margin: auto;
+    @include desktop {margin: 0;}
   }
-
+  
   .social-networks {
     display: flex;
     justify-content: space-evenly;
-  
+    @include desktop {
+      margin-top: 30px;
+      width: 154px;
+      justify-content: space-between;
+    }
+    
     img {
       width: 26px;
+      @include desktop {width: 20px;}
     }
   }
 }
 
 .footer-last {
   margin-top: .2em;
+  @include desktop {text-align: right;}
 
   .r-reserved {
     font-size: .9rem;

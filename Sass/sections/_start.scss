@@ -6,6 +6,10 @@
   background-position-x: right;
   background-position-y: 9px;
   background-size: 100%;
+  @include desktop {
+    background: url('../../images/bg-intro-desktop.svg') no-repeat, var(--v-light-gray);
+    background-position: 620px -180px;
+  }
 }
 
 .start {
@@ -14,35 +18,64 @@
   display: grid;
   grid-template-areas: 'a'
                        'b';
-    &__title {
-      font-size: 2.38rem;
-      font-weight: 400;
-      color: var(--dark-blue);
-    }
+  @include desktop {
+    grid-template-areas: 'a b';
+    padding: 250px 16px 170px 16px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    &__body {
-      color: var(--g-blue);
-      margin: 22px 0 34px 0;
-      font-size: .9rem;
-      line-height: 1.62;
+  &__title {
+    font-size: 2.38rem;
+    font-weight: 400;
+    color: var(--dark-blue);
+    @include desktop {
+      font-size: 3.35rem;
     }
   }
-  
-  .start-info {
-    grid-area: b;
-    text-align: center;
-  }
-  
-  .start-pictures {
-    position: relative;
-    width: 100%;
-    height: 388px;
-    grid-area: a;
-    
-    img {
-      position: absolute;
-      top: -50px;
+
+  &__body {
+    color: var(--g-blue);
+    margin: 22px 0 34px 0;
+    font-size: .9rem;
+    line-height: 1.62;
+    @include desktop {
       width: 100%;
-      transform: scale(1.05);
+      max-width: 440px;   
+      margin: 26px 0 34px 0;
+      font-size: 1.08rem;
     }
+  }
+}
+
+.start-info {
+  grid-area: b;
+  text-align: center;
+  @include desktop {
+    grid-area: a;
+    text-align: left;
+  }
+}
+
+.start-pictures {
+  position: relative;
+  width: 100%;
+  height: 388px;
+  grid-area: a;
+  @include desktop {
+    grid-area: b;
+    height: auto;
+  }
+  
+  img {
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    transform: scale(1.05);
+
+    @include desktop {
+      top: -166px;
+      right: -190px;
+      transform: scale(1.4);
+    }
+  }
 }

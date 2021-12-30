@@ -8,17 +8,26 @@
 .articles {
   text-align: center;
   padding: 5.5em 1.1em;
-
+  @include desktop {
+    text-align: left;
+    padding: 5.2em 1.1em 3.8em 1.1em;
+  }
+  
   &__title {
     font-size: 1.94rem;
     font-weight: 300;
     color: var(--dark-blue);
     margin-bottom: 1.1em;
+    @include desktop {
+      font-size: 2.35rem;
+      margin-bottom: 1.3em;
+    }
   }
 }
 
 .articles-container {
   display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   grid-gap: 1.6em;
+  @include desktop {grid-gap: 1.8em;}
 }

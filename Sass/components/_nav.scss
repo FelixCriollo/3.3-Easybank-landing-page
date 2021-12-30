@@ -2,11 +2,34 @@
 
 // HEADER
 .nav {
+  &__list {
+    @include desktop {
+      width: 310px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__item {
+    @include desktop {
+      font-weight: 400;
+      font-size: .95rem;
+      margin-right: 1.7em;
+
+      a {
+        color: var(--dark-blue);
+      }
+    }
+  }
+
   button {
     background: transparent;
     height: 100%;
+
+    @include desktop {display: none;}
   }
 }
+
 .display-nav {
   position: absolute;
   width: calc(100% - 2.08em);
@@ -44,6 +67,14 @@
     }
   } 
 
+  @include desktop {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item a {font-size: 1.2rem;}
+  }
 }
 
 

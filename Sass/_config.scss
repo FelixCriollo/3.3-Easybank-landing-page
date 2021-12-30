@@ -25,14 +25,15 @@
   }
 }
 
-@mixin tablet {
-  @media (min-width: 1080px) {
+@mixin desktop {
+  @media (min-width: 960px) {
     @content;
   }
 }
 
 body {
   position: relative;
+  overflow-x: hidden;
 }
 
 button {
@@ -50,6 +51,12 @@ li {list-style: none;}
 .container {
   width: 100%;
   padding: 1.4em 1.04em;
+  
+  @include desktop {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 1.21em 1.04em;
+  }
 }
 
 .display-none {
