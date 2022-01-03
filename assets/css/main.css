@@ -58,10 +58,23 @@ li {
   padding: 1em 2.3em;
   border-radius: 100px;
   background: linear-gradient(90deg, var(--green) 0%, var(--cyan) 100%);
+  transition: ease-in-out 1s all linear;
 }
 @media (min-width: 500px) {
   .request-btn {
     padding: 1em 2.25em;
+  }
+}
+.request-btn:hover, .request-btn:focus {
+  background: var(--green);
+  animation: btn-hover 1s;
+}
+@keyframes btn-hover {
+  from {
+    background: linear-gradient(90deg, var(--green) 0%, var(--cyan) 100%);
+  }
+  to {
+    background: var(--green);
   }
 }
 
@@ -75,12 +88,31 @@ li {
 }
 @media (min-width: 960px) {
   .nav__item {
-    font-weight: 400;
+    position: relative;
+    font-weight: 700;
     font-size: 0.95rem;
     margin-right: 1.7em;
   }
   .nav__item a {
+    color: var(--g-blue);
+    transition: 0.5s ease-in all;
+  }
+  .nav__item a:hover, .nav__item a:focus {
     color: var(--dark-blue);
+  }
+  .nav__item a::before {
+    content: "";
+    position: absolute;
+    top: 46px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--green) 0%, var(--cyan) 100%);
+    transition: ease-in-out 0.3s all;
+  }
+  .nav__item a:hover::before, .nav__item a:focus::before {
+    width: 100%;
   }
 }
 .nav button {
@@ -130,6 +162,10 @@ li {
   }
   .footer-nav__item a {
     font-size: 1.2rem;
+    transition: 0.5s all ease-in-out;
+  }
+  .footer-nav__item a:hover, .footer-nav__item a:focus {
+    color: var(--green);
   }
 }
 
@@ -180,10 +216,38 @@ header {
   background-position-y: 9px;
   background-size: 100%;
 }
-@media (min-width: 960px) {
+@media (min-width: 410px) {
+  .section-start {
+    background-position: 0px -20px;
+  }
+}
+@media (min-width: 440px) {
+  .section-start {
+    background-position: 0px -60px;
+  }
+}
+@media (min-width: 500px) {
   .section-start {
     background: url("../../images/bg-intro-desktop.svg") no-repeat, var(--v-light-gray);
-    background-position: 620px -180px;
+    background-size: 100%;
+    background-position: center -70px;
+  }
+}
+@media (min-width: 610px) {
+  .section-start {
+    background-position-y: -130px;
+  }
+}
+@media (min-width: 700px) {
+  .section-start {
+    background-position-y: -220px;
+    background-size: 90%;
+  }
+}
+@media (min-width: 960px) {
+  .section-start {
+    background-position: 610px -220px;
+    background-size: 100%;
   }
 }
 
@@ -254,11 +318,29 @@ header {
   width: 100%;
   transform: scale(1.05);
 }
+@media (min-width: 410px) {
+  .start-pictures img {
+    top: -100px;
+  }
+}
+@media (min-width: 440px) {
+  .start-pictures img {
+    top: -140px;
+    transform: scale(0.99);
+  }
+}
+@media (min-width: 500px) {
+  .start-pictures img {
+    width: 420px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 @media (min-width: 960px) {
   .start-pictures img {
-    top: -166px;
-    right: -190px;
-    transform: scale(1.4);
+    top: -80px;
+    left: 250px;
+    transform: scale(1.8);
   }
 }
 
@@ -362,6 +444,10 @@ header {
   font-weight: 400;
   font-size: 0.96rem;
   color: var(--dark-blue);
+  transition: 0.5s ease-in-out color;
+}
+.card__title:hover, .card__title:focus {
+  color: var(--cyan);
 }
 .card__body {
   font-size: 0.79rem;
@@ -472,6 +558,9 @@ footer {
 @media (min-width: 960px) {
   .footer-social .social-networks img {
     width: 20px;
+  }
+  .footer-social .social-networks img:hover {
+    transform: scale(1.3);
   }
 }
 

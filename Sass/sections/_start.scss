@@ -6,10 +6,16 @@
   background-position-x: right;
   background-position-y: 9px;
   background-size: 100%;
-  @include desktop {
+  @media (min-width: 410px) {background-position: 0px -20px;}
+  @media (min-width: 440px) {background-position: 0px -60px;}
+  @include tablet {
     background: url('../../images/bg-intro-desktop.svg') no-repeat, var(--v-light-gray);
-    background-position: 620px -180px;
+    background-size: 100%;
+    background-position: center -70px;
   }
+  @media (min-width: 610px) {background-position-y: -130px;}
+  @media (min-width: 700px) {background-position-y: -220px;background-size: 90%;}
+  @include desktop {background-position: 610px -220px;background-size: 100%;}
 }
 
 .start {
@@ -72,10 +78,17 @@
     width: 100%;
     transform: scale(1.05);
 
+    @media (min-width: 410px) {top:-100px;}
+    @media (min-width: 440px) {top:-140px;transform: scale(.99);}
+    @include tablet {
+      width: 420px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
     @include desktop {
-      top: -166px;
-      right: -190px;
-      transform: scale(1.4);
+      top: -80px;
+      left: 250px;
+      transform: scale(1.8);
     }
   }
 }

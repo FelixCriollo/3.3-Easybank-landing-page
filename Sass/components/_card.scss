@@ -21,6 +21,9 @@
     font-weight: 400;
     font-size: .96rem;
     color: var(--dark-blue);
+    transition: .5s ease-in-out color;
+
+    &:hover,&:focus {color: var(--cyan)}
   }
 
   &__body {

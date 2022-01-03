@@ -51,7 +51,6 @@ li {list-style: none;}
 .container {
   width: 100%;
   padding: 1.4em 1.04em;
-  
   @include desktop {
     max-width: 1140px;
     margin: 0 auto;

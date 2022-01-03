@@ -7,6 +7,17 @@
   padding: 1em 2.3em;
   border-radius: 100px;
   background: linear-gradient(90deg, var(--green) 0%, var(--cyan) 100%);
-
+  transition: ease-in-out 1s all linear;
+  
   @include tablet { padding: 1em 2.25em; }
+  
+  &:hover,&:focus {
+    background: var(--green);
+    animation: btn-hover 1s;
+
+    @keyframes btn-hover {
+      from {background: linear-gradient(90deg, var(--green) 0%, var(--cyan) 100%);}
+      to {background: var(--green);}
+    }
+  }
 }

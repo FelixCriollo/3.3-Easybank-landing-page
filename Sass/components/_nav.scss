@@ -12,12 +12,33 @@
   }
   &__item {
     @include desktop {
-      font-weight: 400;
+      position: relative;
+      font-weight: 700;
       font-size: .95rem;
       margin-right: 1.7em;
-
+      
+      
       a {
-        color: var(--dark-blue);
+        color: var(--g-blue);
+        transition: .5s ease-in all;
+        
+        &:hover,&:focus {
+          color: var(--dark-blue);
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 46px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 6px;
+          background: linear-gradient(90deg, var(--green) 0%, var(--cyan) 100%);
+          transition: ease-in-out .3s all;
+        }
+
+        &:hover::before,&:focus::before { width: 100%; }
       }
     }
   }
@@ -73,7 +94,12 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
-    &__item a {font-size: 1.2rem;}
+    &__item a {
+      font-size: 1.2rem;
+      transition: .5s all ease-in-out;
+
+      &:hover,&:focus { color: var(--green); }
+    }
   }
 }
 

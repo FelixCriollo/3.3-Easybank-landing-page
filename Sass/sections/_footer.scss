@@ -44,7 +44,10 @@ footer {
     
     img {
       width: 26px;
-      @include desktop {width: 20px;}
+      @include desktop {
+        width: 20px;
+        &:hover {transform: scale(1.3);}
+      }
     }
   }
 }
